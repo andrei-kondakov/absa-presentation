@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>Применение алгоритмов машинного обучения для анализа тональности отзывов о товарах и услугах</h3>
+				<p style="margin: 0"><small>Кондаков А.А.</small>
+					<p style="margin: 0"><small>Научный руководитель: Лукашевич Н.В.</small></p>
+			</section>
+
+			<section class="custom-section">
+				<h4>Акутальность проблемы</h4>
+				<ul class="relevance-list">
+					<li class="fragment">Задача анализа тональности является одной из активно развиваемых технологий в сфере автоматической обработки текстов.</li>
+					<li class="fragment">Развитие социальных сетей, онлайновых рекомендательных сервисов.</li>
+					<li class="fragment">Использование алгоритмов машинного обучения для анализа тональности текстов в настоящее время позволяет достигнуть лучших результатов.</li>
+				</ul>
+				<aside class="notes">
+					Задача анализа тональности, т.е. выявления мнений автора текста по поводу предмета, обсуждаемого в тексте, является одной из активно развиваемых технологий в сфере автоматической обработки текстов в последние годы [1]. Актуальность проблемы связана с ростом социальных сетей, онлайн сервисов с отзывами в сферах услуг, которые содержат большое количество мнений по разным вопросам. С исследовательской точки зрения оно предоставляет большой интерес, т.к. предполагает решения комплекса нетривиальных задач из области компьютерной лингвистики и машинного обучения [2].
+				</aside>
+			</section>
+
+			<section>
+				<section class="custom-section">
+					<h4>Постановка задачи</h4>
+					<p style="text-align: left">
+						Дан текст с отзывом о некоторой сущности, по каждому предложению которого необходимо идентифицировать следующий тип информации:
+					</p>
+					<ul>
+						<li><b>Аспектную категорию</b></li>
+						<li>Отношение автора текста к данной категории</li>
+					</ul>
+					<aside class="notes">
+						Постановка задачи анализа тональности разнообразна: определение тональности всего текста, отдельных предложений, конкретных фраз и терминов. Более формально проблема анализа тональности называется аспектно-эмоциональным анализом [3], где аспект – это интересующая сущность и его признак или категория, и разбивается на следующие подзадачи:
+						1.	Определение аспектных категорий в предложении.
+						2.	Извлечение аспектных терминов.
+						3.	Определение тональности аспектных терминов.
+						4.	Определение тональности аспектных категорий.
+
+					</aside>
+				</section>
+				<section class="custom-section">
+						<h4>Пример выделения</h4>
+
+				</section>
+			</section>
+
+
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			slideNumber: true,
+			history: true,
+			showNotes: true,
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}, {
+				src: 'plugin/notes/notes.js',
+				async: true
+			}, {
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				callback: function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}]
+		});
+	</script>
+</body>
+
+</html>
