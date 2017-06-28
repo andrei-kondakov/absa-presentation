@@ -2,6 +2,14 @@
     font-size: 30pt !important;
 }
 
+.aspects-list {
+    font-size: 25pt !important;
+}
+
 .custom-section {
     top: 40px !important;
+}
+
+.xml-example {
+    font-size: 10pt !important;
 }
