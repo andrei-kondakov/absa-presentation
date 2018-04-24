@@ -1,23 +1,12 @@
-.relevance-list {
-    font-size: 30pt !important;
+div.svg-diagram {
+    margin-top: 60px;
 }
 
-.aspects-list {
-    font-size: 25pt !important;
-}
-
-.custom-section {
-    top: 40px !important;
-}
-
-.xml-example {
-    font-size: 10pt !important;
-}
-
-.svg-scheme {
-    margin-top: 50px;
-}
-
-#exp3 table{
+#exp3 table {
     font-size: 15pt;
+}
+
+.reveal section img {
+    border: none !important;
+    box-shadow: none !important;
 }
