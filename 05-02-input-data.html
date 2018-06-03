@@ -1,0 +1,81 @@
+
+  <section class="custom-section">
+    <h4>Исходные данные</h4>
+    <ul>
+      <li>Размеченные выборки с отзывами на русском языке о ресторанах.</li>
+      <li>Предоставлены организаторами на международном семинаре по семантической оценки <a href="http://alt.qcri.org/semeval2016/task5/">SemEval-2016</a>.</li>
+      <li>Обучающая выборка: 300 отзывов (~4000 предложений).</li>
+      <li>Тестовая выборка: 100 отзывов (~1000 предложений).</li>
+      <li>Формат: XML.</li>
+    </ul>
+  </section>
+  <section class="custom-section">
+    <h4>Пример неразмеченного отзыва</h4>
+    <pre class="xml-example"><code class="hljs" data-trim contenteditable>
+Были в Дитае на прошлой неделе с подругой.
+Зашли случайно, обе в китайских ресторанах не бывали, решили попробовать, что это такое.
+Что заказывать не знали, положились на вкус официантки.
+Совершенно не разочаровались!
+Подруге принесли судака, мне - свинину по-пекински.
+Еда вкусная, необычная.
+Интересно будет зайти и попробовать что-нибудь еще)
+По поводу интерьера: место спокойное, шумных компаний нет
+(не было, по крайней мере, в момент нашего посещения),
+очень приятная и уютная атмосфера, все в лучших традициях.
+Остались очень довольны данным заведением.
+    </code></pre>
+  </section>
+  <section class="custom-section">
+    <h4>Пример размеченного отзыва</h4>
+    <pre class="xml-example"><code class="hljs" data-trim contenteditable>
+<sentence id="10099:0">
+  <text>Были в Дитае на прошлой неделе с подругой.</text>
+  <Opinions/>
+</sentence>
+<sentence id="10099:1">
+<text>Зашли случайно, обе в китайских ресторанах не бывали, решили попробовать, что это такое.</text>
+  <Opinions/>
+</sentence>
+<sentence id="10099:2">
+  <text>Что заказывать не знали, положились на вкус официантки.</text>
+  <Opinions/>
+</sentence>
+<sentence id="10099:3">
+  <text>Совершенно не разочаровались!</text>
+  <Opinions>
+    <Opinion target="NULL" category="RESTAURANT#GENERAL" polarity="positive" from="0" to="0"/>
+  </Opinions>
+</sentence>
+<sentence id="10099:4">
+  <text>Подруге принесли судака, мне - свинину по-пекински.</text>
+  <Opinions/>
+  </sentence>
+<sentence id="10099:5">
+  <text>Еда вкусная, необычная.</text>
+  <Opinions>
+    <Opinion target="Еда" category="FOOD#QUALITY" polarity="positive" from="0" to="3"/>
+  </Opinions>
+</sentence>
+<sentence id="10099:6">
+  <text>Интересно будет зайти и попробовать что-нибудь еще)</text>
+  <Opinions>
+    <Opinion target="NULL" category="FOOD#QUALITY" polarity="positive" from="0" to="0"/>
+  </Opinions>
+</sentence>
+<sentence id="10099:7">
+  <text>По поводу интерьера: место спокойное, шумных компаний нет (не было, по крайней мере, в момент нашего посещения), очень приятная и уютная атмосфера, все в лучших традициях.</text>
+  <Opinions>
+    <Opinion target="интерьера" category="AMBIENCE#GENERAL" polarity="neutral" from="10" to="19"/>
+    <Opinion target="место" category="RESTAURANT#GENERAL" polarity="neutral" from="21" to="26"/>
+    <Opinion target="атмосфера" category="AMBIENCE#GENERAL" polarity="positive" from="137" to="146"/>
+  </Opinions>
+</sentence>
+<sentence id="10099:8">
+  <text>Остались очень довольны данным заведением.</text>
+  <Opinions>
+    <Opinion target="заведением" category="RESTAURANT#GENERAL" polarity="positive" from="31" to="41"/>
+  </Opinions>
+</sentence>
+
+    </code></pre>
+  </section>

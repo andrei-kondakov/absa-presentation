@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/theme/white.css">
     <link rel="stylesheet" href="css/custom.css">
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 
     <script src="lib/js/jquery.min.js"></script>
@@ -37,13 +37,17 @@
         <section data-external="00-intro.html"></section>
         <section data-external="01-relevance.html"></section>
         <section data-external="02-goal.html"></section>
-        <section data-external="03-main-tasks.html"></section>
+        <section data-external="03-00-main-tasks.html"></section>
+				<section data-external="03-02-opnion-def.html"></section>
         <section>
             <section data-external="04-01-aspect-analysis.html"></section>
             <section data-external="04-02-aspect-analysis-example.html"></section>
         </section>
-        <section data-external="05-approaches.html"></section>
-        <section data-external="06-research-areas.html"></section>
+        <section data-external="05-00-approaches.html"></section>
+				<section data-external="05-01-ml-task.html"></section>
+				<section data-external="05-02-input-data.html"></section>
+        <section data-external="06-00-research-areas.html"></section>
+				<section data-external="06-01-mat-text.html"></section>
 
         <section>
             <section data-external="07-01-sklearn-aspects.html"></section>
@@ -99,6 +103,13 @@
         center: false,
         history: true,
         slideNumber: true,
+
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
+
+
         dependencies: [
             {
                 src: 'plugin/external/external.js', condition: function () {
@@ -114,7 +125,8 @@
                 }
             },
             {src: 'plugin/chart/Chart.min.js'},
-            {src: 'plugin/chart/csv2chart.js'}
+            {src: 'plugin/chart/csv2chart.js'},
+						{src: 'plugin/math/math.js', async: true }
         ]
     });
 </script>
