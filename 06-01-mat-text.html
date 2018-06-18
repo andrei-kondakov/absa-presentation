@@ -16,31 +16,31 @@
 <section>
 <h4>Векторная модель представления текста</h4>
 <div style="font-size: 25px;">
-<p style="text-align: left">Алгоритм преобразующий документ в вектор $\vec{d_j}=(w_{1j}, w_{2j}, ..., w_{nj})$ называется <b>векторайзером</b>.
+<p style="text-align: left">Процедура, которая преобразует документ в вектор $\vec{d_j}=(w_{1j}, w_{2j}, ..., w_{nj})$, называется <b>векторизацией</b>.
 	<table>
     	<thead><tr>
-            <th>Векторайзер</th>
+            <th>Векторизация</th>
             <th>Определение $w_{ij}$</th>
         </tr></thead>
         <tbody>
           <tr>
-            <td>Булевский векторайзер</td>
+            <td>Булевская векторизация</td>
             <td>$w_{ij}=P(t_i)=t_i \in d_j$</td>
           </tr>
           <tr>
-              <td>Количественный векторайзер</td>
+              <td>Количественная векторизация</td>
               <td>$w_{ij}=с_i$</td>
           </tr>
           <tr>
-              <td>TF векторайзер</td>
+              <td>TF векторизация</td>
               <td>$w_{ij}=\frac{c_i}{N_j}$</td>
           </tr>
           <tr>
-              <td>IDF векторайзер</td>
+              <td>IDF векторизация</td>
               <td>$w_{ij}=log\frac{|D|}{|d_k \in D | t_i \in d_k|}$</td>
           </tr>
           <tr>
-              <td>TF-IDF векторайзер</td>
+              <td>TF-IDF векторизация</td>
               <td>$w_{ij}=\frac{c_i}{N_j}log\frac{|D|}{|d_k \in D | t_i \in d_k|}$</td>
           </tr>
         </tbody>

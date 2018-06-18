@@ -1,14 +1,49 @@
-<h5 style="padding-bottom: 0px; margin-bottom: 0px;">Результаты исследований: определение тональности</h5>
-<!--<img src="img/results/polarities.png" style="width: 800px;">-->
-<canvas data-chart="horizontalBar">
-Accuracy, 0.71, 0.77923, 0.7824, 0.820451843
-<!--
-{
- "data" : {
-  "labels" : ["Baseline Semeval 2016", "Best Semeval 2016", "MultinomialNB", "LSTM"],
-  "datasets" : [{ "backgroundColor": "#3366CC" }]
- },
- "options": {"responsive": true, "legend": {"display": false}, "scales": {"xAxes": [{"scaleLabel": {"display": true,"labelString": "Accuracy", "fontSize": 18}}]}}
-}
--->
-</canvas>
+<h5>Результаты исследований: определение тональности</h5>
+<div style="font-size: 20px;">
+  <table>
+    <thead>
+      <tr>
+        <th>Алгоритм</th>
+        <th>Accuracy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Дерево принятий решений</td>
+        <td>0.243</td>
+      </tr>
+      <tr>
+        <td>Градиентный бустинг</td>
+        <td>0.450</td>
+      </tr>
+      <tr>
+        <td>Адаптивный бустинг</td>
+        <td>0.501</td>
+      </tr>
+      <tr>
+        <td>Случайный лес</td>
+        <td>0.615</td>
+      </tr>
+      <tr>
+        <td>Метод опорных векторов</td>
+        <td>0.620</td>
+      </tr>
+      <tr>
+        <td>Мультиномиальный наивный метод Байеса</td>
+        <td>0.657</td>
+      </tr>
+      <tr>
+        <td>Baseline соревнования Semeval</td>
+        <td>0.710</td>
+      </tr>
+      <tr>
+        <td>Лучший алгоритм участников соревнования Semeval</td>
+        <td>0.779</td>
+      </tr>
+      <tr>
+        <td><b>LSTM-сеть</b></td>
+        <td><b>0.792</b></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
