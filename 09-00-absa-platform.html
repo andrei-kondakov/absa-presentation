@@ -1,12 +1,13 @@
-<h4>Исследование: глубокое машинное обучение, LSTM-сеть</h4>
+<section>
+<h4>LSTM-сеть</h4>
 <img src="img/lstm.png" style="width: 600px;">
 <div style="font-size: 20px">
-$$f_t=\sigma(W_f*[h_{t-1}, x_t]+b_f)$$
-$$i_t=\sigma(W_i*[h_{t-1}, x_t]+b_i)$$
-$$\widetilde{C}_t=tanh(W_C*[h_{t-1}, x_t]+b_C)$$
-$$C_t=f_t*C_{t-1}+i_t *\widetilde{C}_t$$
-$$o_t=\sigma(W_o*[h_{t-1}, x_t]+b_o)$$
-$$h_t=o_t*tanh(C_t)$$
+$$f_t=\sigma(W_f[h_{t-1}, x_t]+b_f)$$
+$$i_t=\sigma(W_i[h_{t-1}, x_t]+b_i)$$
+$$\widetilde{C}_t=tanh(W_C[h_{t-1}, x_t]+b_C)$$
+$$C_t=f_tC_{t-1}+i_t *\widetilde{C}_t$$
+$$o_t=\sigma(W_o[h_{t-1}, x_t]+b_o)$$
+$$h_t=o_ttanh(C_t)$$
 </div>
 <aside class="notes">
   <ul>
@@ -17,3 +18,95 @@ $$h_t=o_t*tanh(C_t)$$
 </aside>
 <p><small>Рисунок взят из статьи: "LSTM – сети долгой краткосрочной памяти"<br>
 http://alexsosn.github.io/ml/2015/11/17/LSTM.html (дата обращения: 05.04.2018)</small></p>
+</section>
+<section>
+  <h4>LSTM-сеть: наилучшие модели</h4>
+  <table style="font-size: 25px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Функция активации<br>выхода LSTM слоя</th>
+        <th>Функция активации<br>рекуррентной связи LSTM слоя</th>
+        <th>Инициализация весов</th>
+        <th>Количество нейронов LSTM слоя</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>1</b></td>
+        <td>selu</td>
+        <td>hard_sigmoid</td>
+        <td>uniform</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td><b>20</b></td>
+        <td>elu</td>
+        <td>hard_sigmoid</td>
+        <td>uniform</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td><b>101</b></td>
+        <td>linear</td>
+        <td>sigmoid</td>
+        <td>glorot_uniform</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td><b>106</b></td>
+        <td>hard_sigmoid</td>
+        <td>selu</td>
+        <td>uniform</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td><b>109</b></td>
+        <td>hard_sigmoid</td>
+        <td>hard_sigmoid</td>
+        <td>uniform</td>
+        <td>150</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h4>LSTM-сеть: наилучшие модели</h4>
+  <table style="font-size: 25px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Коэффициент дропаута</th>
+        <th>Коэффициент ограничения весов</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>1</b></td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><b>20</b></td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><b>101</b></td>
+        <td>0</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><b>106</b></td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><b>109</b></td>
+        <td>0.5</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
